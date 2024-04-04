@@ -1,0 +1,5 @@
+require('vimrc')
+require('plugins')
+require('mason-config')
+require('rust-analyzer')
+require('nvim-tree-config')
