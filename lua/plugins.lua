@@ -10,4 +10,10 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional
     },
   }
+  use 'ms-jpq/coq_nvim'
+  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+  }
+  use 'onsails/lspkind-nvim'
 end)

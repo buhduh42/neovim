@@ -13,3 +13,9 @@ opt.ignorecase = true
 opt.termguicolors = true
 
 --vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', {});
+
+-- Treesitter folding 
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable = false
+vim.opt.mouse = ''
