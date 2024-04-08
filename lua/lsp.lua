@@ -65,25 +65,23 @@ cmp.setup({
       cmp.ItemField.Kind,
       cmp.ItemField.Menu,
     },
-    --[[
     --not sure why this isn't working... don't really care...
-    format = lspkind.cmp_format {
-      mode = "symbol_text",
-      maxwidth = 60,
-      before = function(entry, vim_item)
-        vim_item.menu = ({
-          nvim_lsp = "ﲳ",
-          nvim_lua = "",
-          treesitter = "",
-          path = "ﱮ",
-          --buffer = "﬘",
-          --bash = "",
-          vsnip = "",
-          spell = "暈",
-        })[entry.source.name]
-      end
-    },
-    ]]--
+    --format = lspkind.cmp_format {
+      --mode = "symbol_text",
+      --maxwidth = 60,
+      --before = function(entry, vim_item)
+        --vim_item.menu = ({
+          --nvim_lsp = "ﲳ",
+          --nvim_lua = "",
+          --treesitter = "",
+          --path = "ﱮ",
+          ----buffer = "﬘",
+          ----bash = "",
+          --vsnip = "",
+          --spell = "暈",
+        --})[entry.source.name]
+      --end
+    --},
   },
 })
 
@@ -92,6 +90,8 @@ cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
     { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
   }, {
+    { name = 'lua' },
+  },{
     { name = 'buffer' },
   }, {
     { name = 'rust' },
@@ -99,6 +99,8 @@ cmp.setup.filetype('gitcommit', {
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+-- NOTE: this block was interfering with 'e: <tab>', git rid of it for now
+--[[
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
@@ -116,6 +118,7 @@ cmp.setup.cmdline(':', {
   }),
   matching = { disallow_symbol_nonprefix_matching = false }
 })
+]]--
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -145,3 +148,5 @@ require('lspconfig')['rust_analyzer'].setup {
   },
   capabilities = capabilities
 }
+
+vim.keymap.set('n', '<leader>e', ':lua vim.diagnostic.open_float()<CR>', {})

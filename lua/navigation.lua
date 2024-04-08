@@ -29,7 +29,7 @@ require('nvim-tree').setup({
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', {});
 
-require('snippy').setup({})
+--require('snippy').setup({})
 
 --[[
 --was going to write my own nerdtree replacement, not too involved, sticking with
