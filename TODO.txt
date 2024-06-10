@@ -1,0 +1,14 @@
+keeping a tally of things I need to implement/improve at some point in neovim
+
+- See https://youtu.be/ZRnWmNdf5IE?si=axOC3HbcrEpY4fdT&t=705, integrate that help system
+
+- cd in the nvim-tree window
+
+- K prints help/man pages, properly set this up
+- should probably add a way to navigate rusts documentation by going to the browser? think about it
+
+************lsp stuff***********
+- vim.lsp.buf.references
+- lua vim.diagnostic.setfqlist({}) opens a quick fix list window, write a cool plugin for this with navigation and stuff
+- hide show different severities, navigate, etc etc
+- show type info of variable on hover(or something), maybe on a key press?
