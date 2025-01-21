@@ -9,6 +9,8 @@ keeping a tally of things I need to implement/improve at some point in neovim
 
 - get a changelist with errors and warnings that I can navigate with
 
+- do something along the lines of :setfiletype gdscript
+
 ************lsp stuff***********
 - vim.lsp.buf.references
 - lua vim.diagnostic.setfqlist({}) opens a quick fix list window, write a cool plugin for this with navigation and stuff
