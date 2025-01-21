@@ -7,7 +7,7 @@ local types = {
 }
 vim.api.nvim_create_autocmd(types, {
   pattern = {"*.gd"},
-  callback = function(ev)
+  callback = function(_)
     vim.opt.expandtab = true
   end
 })
