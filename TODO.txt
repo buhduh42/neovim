@@ -7,6 +7,8 @@ keeping a tally of things I need to implement/improve at some point in neovim
 - K prints help/man pages, properly set this up
 - should probably add a way to navigate rusts documentation by going to the browser? think about it
 
+- get a changelist with errors and warnings that I can navigate with
+
 ************lsp stuff***********
 - vim.lsp.buf.references
 - lua vim.diagnostic.setfqlist({}) opens a quick fix list window, write a cool plugin for this with navigation and stuff

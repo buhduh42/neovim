@@ -3,6 +3,8 @@ require('plugins')
 
 require('vimrc')
 
+require('gdscript')
+
 --mason
 --tree-sitter
 --rust-analyzer
