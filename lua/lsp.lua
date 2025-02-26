@@ -2,7 +2,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml" },
+  ensure_installed = { "lua", "rust", "toml", "gdscript", "godot_resource", "gdshader" },
   auto_install = true,
   highlight = {
     enable = true,
@@ -148,5 +148,8 @@ require('lspconfig')['rust_analyzer'].setup {
   },
   capabilities = capabilities
 }
+
+require("lspconfig").gdscript.setup(capabilities)
+
 
 vim.keymap.set('n', '<leader>e', ':lua vim.diagnostic.open_float()<CR>', {})
